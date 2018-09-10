@@ -12,6 +12,21 @@
       h.parentNode.insertBefore(s,h);
   })(window,document);
 </script>
+  
+  window._pcq = window._pcq || [];
+_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
+    console.log('User got successfully subscribed.');
+    window.location = "https://www.google.com"; 
+
+ 
+  
+  window._pcq = window._pcq || [];
+_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
+function callbackFunctionOnFailedSubscription(values) {
+    console.log('User could not get subscribed to push notifications');
+     window.location = "https://www.irctc.co.in";
+  
 </head>
   <body>
     First ever website
