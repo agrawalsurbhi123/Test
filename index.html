@@ -13,21 +13,14 @@
   })(window,document);
 </script>
   
-  <script> 
-  window._pcq = window._pcq || [];
-_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
-function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
-    console.log('User got successfully subscribed.');
-    window.location = "https://www.google.com"; 
-}
-  </script>
-  
  <script>
-  <button onclick="_pcq.push(['triggerPreferences']);">
-  PREFERENCE SETTINGS
-</button>
-  </script>
-
+ _pcq.push(['APIReady', callbackFunction]);
+ function callbackFunction() {
+   console.log('API is ready');
+window._pcq.push(['triggerOptIn']);
+console.log("script executed");
+ }
+</script>
   
   
   
